@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'startUpGoggleApp',
 ]
 
 MIDDLEWARE = [
@@ -75,8 +76,12 @@ WSGI_APPLICATION = 'startUpGoggleProject.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'startupGoogle_db',
+        'USER': 'rksharma',
+        'PASSWORD': 'startupgoggle',
+        'HOST': '13.126.9.29',   # Or an IP Address that your DB is hosted on
+        'PORT': '3306',
     }
 }
 
