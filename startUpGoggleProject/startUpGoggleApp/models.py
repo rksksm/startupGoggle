@@ -31,7 +31,7 @@ class StartupDirectorie(models.Model):
     publish = models.DateTimeField(default=datetime.now)
     isActive = models.BooleanField(default='True')
 
-class StartUpNewse(models.Model):
+class StartUpNew(models.Model):
     type = models.ManyToManyField(StartUpType)
     title = models.CharField(max_length=200)
     url = models.CharField(max_length=200, unique=True)
