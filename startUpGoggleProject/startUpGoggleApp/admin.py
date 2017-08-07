@@ -19,21 +19,21 @@ make_deactive.short_description = "Deactivate Selected Item"
 make_active.short_description = "activate Selected Item"
 
 
-class BusinessTypeAdmin(admin.ModelAdmin):
+class StartUpTypeAdmin(admin.ModelAdmin):
     search_fields = ['title', 'publish', 'isActive']
     list_display = ['title', 'publish', 'isActive']
     actions = [make_deactive, make_active]
 
-class BusinessDirectoryAdmin(admin.ModelAdmin):
+class StartupDirectorieAdmin(admin.ModelAdmin):
     search_fields = ['name', 'publish', 'isActive']
     list_display = ['name', 'publish', 'isActive']
     actions = [make_deactive, make_active]
 
-class BusinessNewsAdmin(admin.ModelAdmin):
+class StartUpNewseAdmin(admin.ModelAdmin):
     search_fields = ['title', 'publish', 'isActive']
     list_display = ['title', 'publish', 'isActive']
     actions = [make_deactive, make_active]
 
-admin.site.register(BusinessType, BusinessTypeAdmin)
-admin.site.register(BusinessDirectory, BusinessDirectoryAdmin)
-admin.site.register(BusinessNews, BusinessNewsAdmin)
+admin.site.register(StartUpType, StartUpTypeAdmin)
+admin.site.register(StartupDirectorie, StartupDirectorieAdmin)
+admin.site.register(StartUpNewse, StartUpNewseAdmin)
